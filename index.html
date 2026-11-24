@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online PDF and document tools. Convert files securely in your browser with UnaisBot.">
+  <meta name="theme-color" content="#0b1220">
+  <title>UnaisBot File Converter — Free Online PDF Tools</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.8.0/mammoth.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="UnaisBot home">
+      <span class="brand-mark">U</span><span>Unais<span class="brand-accent">Bot</span></span>
+    </a>
+    <nav><a href="#tools">PDF Tools</a><a href="#how">How it works</a><a href="#privacy">Privacy</a></nav>
+    <a class="header-cta" href="#tools">Explore tools <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span class="live-dot"></span> SIMPLE · FAST · PRIVATE</div>
+        <h1>Files made <span>simpler.</span></h1>
+        <p class="hero-copy">Convert, organise and work with your documents — right in your browser. No account required.</p>
+        <a class="primary-btn" href="#tools">Explore all tools <span>↓</span></a>
+        <div class="trust-row"><span>✓ Free to use</span><span>✓ No sign-up</span><span>✓ Browser-based tools</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="float-card card-word"><span class="file-icon word">W</span><div><b>Document.docx</b><small>Word document</small></div></div>
+        <div class="convert-arrow">→</div>
+        <div class="float-card card-pdf"><span class="file-icon pdf">PDF</span><div><b>Your file.pdf</b><small>Ready to download</small></div><span class="check">✓</span></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      </div>
+    </section>
+
+    <section class="tools-section" id="tools">
+      <div class="section-heading">
+        <div><div class="eyebrow dark">YOUR EVERYDAY FILE TOOLS</div><h2>What would you like to do?</h2><p>Choose a tool to get started. Your files stay on your device for supported browser-based conversions.</p></div>
+        <div class="tool-count">06 <span>TOOLS</span></div>
+      </div>
+      <div class="tool-grid">
+        <button class="tool-card" data-tool="docx"><span class="tool-icon blue">W</span><span class="tool-tag">WORD</span><strong>Word to PDF</strong><small>Convert DOCX documents into PDF files.</small><span class="tool-link">Open tool <b>↗</b></span></button>
+        <button class="tool-card" data-tool="jpg"><span class="tool-icon coral">JPG</span><span class="tool-tag">PDF</span><strong>PDF to JPG</strong><small>Turn PDF pages into JPG images.</small><span class="tool-link">Open tool <b>↗</b></span></button>
+        <button class="tool-card" data-tool="png"><span class="tool-icon violet">PNG</span><span class="tool-tag">PDF</span><strong>PDF to PNG</strong><small>Export crisp PNG images from PDF pages.</small><span class="tool-link">Open tool <b>↗</b></span></button>
+        <button class="tool-card" data-tool="images"><span class="tool-icon green">IMG</span><span class="tool-tag">IMAGES</span><strong>Images to PDF</strong><small>Combine JPG and PNG images into one PDF.</small><span class="tool-link">Open tool <b>↗</b></span></button>
+        <button class="tool-card" data-tool="merge"><span class="tool-icon amber">＋</span><span class="tool-tag">PDF</span><strong>Merge PDF</strong><small>Combine multiple PDF files into one.</small><span class="tool-link">Open tool <b>↗</b></span></button>
+        <button class="tool-card" data-tool="split"><span class="tool-icon slate">↗</span><span class="tool-tag">PDF</span><strong>Split PDF</strong><small>Extract selected pages from a PDF.</small><span class="tool-link">Open tool <b>↗</b></span></button>
+      </div>
+    </section>
+
+    <section class="privacy-section" id="privacy">
+      <div class="privacy-icon">⌑</div><div><h3>Your files are yours.</h3><p>Supported conversions run locally in your browser. Files are not uploaded to an UnaisBot server. Avoid using public or shared computers for sensitive documents.</p></div>
+      <span class="privacy-label">PRIVACY FIRST</span>
+    </section>
+
+    <section class="how-section" id="how">
+      <div class="eyebrow dark">THREE SIMPLE STEPS</div><h2>Get it done in moments.</h2>
+      <div class="steps"><div><span>01</span><b>Choose a tool</b><p>Select the conversion or PDF task you need.</p></div><div><span>02</span><b>Add your files</b><p>Select files from your device and adjust options.</p></div><div><span>03</span><b>Download</b><p>Save the finished file directly to your device.</p></div></div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">U</span><span>Unais<span class="brand-accent">Bot</span></span></a><span>Free online file tools</span><span>© <span id="year"></span> UnaisBot</span></footer>
+
+  <div class="modal-backdrop" id="modal" aria-hidden="true">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close-modal" id="closeModal" aria-label="Close">×</button>
+      <div class="modal-kicker">UNAISBOT FILE TOOL</div>
+      <h2 id="modalTitle">PDF to JPG</h2>
+      <p id="modalDescription">Convert your PDF pages into image files.</p>
+      <div class="dropzone" id="dropzone" tabindex="0">
+        <div class="upload-symbol">↑</div><strong>Drop your file here</strong><span>or click to browse your device</span>
+        <small id="acceptedTypes">PDF files supported</small>
+        <input type="file" id="fileInput" hidden>
+      </div>
+      <div class="selected-files" id="selectedFiles"></div>
+      <div class="options" id="options"></div>
+      <div class="progress-wrap" id="progressWrap"><div class="progress-track"><div id="progressBar"></div></div><span id="progressText">Preparing…</span></div>
+      <div class="result" id="result"></div>
+      <div class="modal-actions"><button class="secondary-btn" id="resetBtn">Reset</button><button class="primary-btn" id="convertBtn" disabled>Convert files <span>→</span></button></div>
+      <p class="modal-note">Processing happens in your browser. Keep this tab open until the conversion finishes.</p>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
